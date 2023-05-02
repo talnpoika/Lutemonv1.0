@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ArenaActivity">
+
+    <TextView
+        android:id="@+id/txtHeadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Valitse Lutemonit taisteluun!"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cbZero"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:text="Zero"
+        app:layout_constraintStart_toStartOf="@+id/txtHeadline"
+        app:layout_constraintTop_toBottomOf="@+id/txtHeadline" />
+
+    <CheckBox
+        android:id="@+id/cbOne"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="One"
+        app:layout_constraintStart_toStartOf="@+id/cbZero"
+        app:layout_constraintTop_toBottomOf="@+id/cbZero" />
+
+    <CheckBox
+        android:id="@+id/cbTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Two"
+        app:layout_constraintStart_toStartOf="@+id/cbOne"
+        app:layout_constraintTop_toBottomOf="@+id/cbOne" />
+
+    <CheckBox
+        android:id="@+id/cbThree"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Three"
+        app:layout_constraintStart_toStartOf="@+id/cbTwo"
+        app:layout_constraintTop_toBottomOf="@+id/cbTwo" />
+
+    <CheckBox
+        android:id="@+id/cbFour"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Four"
+        app:layout_constraintStart_toStartOf="@+id/cbThree"
+        app:layout_constraintTop_toBottomOf="@+id/cbThree" />
+
+    <Button
+        android:id="@+id/btFight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="battle"
+        android:text="Taisteluun!"
+        app:layout_constraintStart_toStartOf="@+id/txtHeadline"
+        app:layout_constraintTop_toBottomOf="@+id/cbFour" />
+
+    <CheckBox
+        android:id="@+id/cbBZero"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:text="Zero"
+        app:layout_constraintEnd_toEndOf="@+id/txtHeadline"
+        app:layout_constraintStart_toEndOf="@+id/cbZero"
+        app:layout_constraintTop_toBottomOf="@+id/txtHeadline" />
+
+    <CheckBox
+        android:id="@+id/cbBOne"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="One"
+        app:layout_constraintStart_toStartOf="@+id/cbBZero"
+        app:layout_constraintTop_toBottomOf="@+id/cbBZero" />
+
+    <CheckBox
+        android:id="@+id/cbBTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Two"
+        app:layout_constraintStart_toStartOf="@+id/cbBOne"
+        app:layout_constraintTop_toBottomOf="@+id/cbBOne" />
+
+    <CheckBox
+        android:id="@+id/cbBThree"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Three"
+        app:layout_constraintStart_toStartOf="@+id/cbBTwo"
+        app:layout_constraintTop_toBottomOf="@+id/cbBTwo" />
+
+    <CheckBox
+        android:id="@+id/cbBFour"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Four"
+        app:layout_constraintStart_toStartOf="@+id/cbBThree"
+        app:layout_constraintTop_toBottomOf="@+id/cbBThree" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btFight"
+        app:layout_constraintVertical_bias="1.0"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btReturnHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="returnHome"
+        android:text="Palaa Kotiin"
+        app:layout_constraintBottom_toTopOf="@+id/rvText"
+        app:layout_constraintEnd_toEndOf="@+id/txtHeadline"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btFight"
+        app:layout_constraintTop_toBottomOf="@+id/cbBFour"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/cbShowReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Näytä taisteluraportti"
+        app:layout_constraintEnd_toEndOf="@+id/btReturnHome"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/btFight"
+        app:layout_constraintTop_toBottomOf="@+id/btReturnHome" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

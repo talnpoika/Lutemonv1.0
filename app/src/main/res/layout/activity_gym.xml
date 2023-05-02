@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GymActivity">
+
+    <RadioGroup
+        android:id="@+id/rgLutemons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbIdZero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ID Zero" />
+
+        <RadioButton
+            android:id="@+id/rbIdOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ID One" />
+
+        <RadioButton
+            android:id="@+id/rbIdTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ID Two" />
+
+        <RadioButton
+            android:id="@+id/rbIdThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ID Three" />
+
+        <RadioButton
+            android:id="@+id/rbIdFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ID Four" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rgTrainAttribute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rgLutemons"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbAttack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hyökkäys" />
+
+        <RadioButton
+            android:id="@+id/rbDefence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Puolustus" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btTraining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="train"
+        android:text="Harjoittele"
+        app:layout_constraintEnd_toEndOf="@+id/rgTrainAttribute"
+        app:layout_constraintStart_toStartOf="@+id/rgLutemons"
+        app:layout_constraintTop_toBottomOf="@+id/rgLutemons" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
